@@ -35,7 +35,13 @@ jobs:
 
       - save_cache:
           paths:
+            - ~/.iv2/cache
+            - ~/.sbt
             - ~/.m2
+            - target/resolution-cache
+            - target/streams
+            - project/target/resolution-cache
+            - project/target/streams
           key: v1-dependencies-{{ checksum "build.sbt" }}
 
       # run tests!
